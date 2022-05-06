@@ -15,7 +15,7 @@
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Title -->
-    <title>Movie Ratings - Maria Goemans</title>
+    <title>Shawarma Haven Menu - Maria Goemans</title>
   </head>
   <body>
     <script src="./js/script.js"></script>
@@ -59,30 +59,32 @@
       <label for="sandwich-size">Choose a sandwich size</label>
       <select id="sand-size" name="sand-size">
         <option value="small">Small</option>
+        <option value="medium">Medium</option>
         <option value="large">Large</option>
       </select>
       <h4>Choose Your Toppings:</h4>
       <!-- Checkboxes for toppings -->
       <label for="tabbouleh">Tabbouleh</label>
-      <input type="checkbox" id="tabbouleh" name="tabbouleh" value="true"><br><br>
+      <input type="checkbox" id="tabbouleh" name="tabbouleh"><br><br>
       <label for="hummus">Hummus</label>
-      <input type="checkbox" id="hummus" name="hummus" value="true"><br><br>
-      <label for="garlic">Garlic Sauce</label>
-      <input type="checkbox" id="garlic" name="garlic" value="true"><br><br>
+      <input type="checkbox" id="hummus" name="hummus"><br><br>
+      <label for="garlic">Garlic sauce</label>
+      <input type="checkbox" id="garlic" name="garlic"><br><br>
       <label for="turnips">Pickled turnips</label>
-      <input type="checkbox" id="turnips" name="turnips" value="true"><br><br>
+      <input type="checkbox" id="turnips" name="turnips"><br><br>
       <label for="pickles">Pickles</label>
-      <input type="checkbox" id="pickles" name="pickles" value="true"><br><br>
+      <input type="checkbox" id="pickles" name="pickles"><br><br>
       <label for="onions">Onions</label>
-      <input type="checkbox" id="onions" name="onions" value="true"><br><br>
-      <label for="peppers">Hot Peppers</label>
-      <input type="checkbox" id="peppers" name="peppers" value="true"><br><br>
+      <input type="checkbox" id="onions" name="onions"><br><br>
       <h4>Choose Your Sides</h4>
-      <label for="potatoes">Garlic Potatoes</label>
-      <input type="checkbox" id="potatoes" name="potatoes" value="true"><br><br>
+      <!-- Number input for garlic potato side -->
+      <label for="potatoes">Garlic potatoes</label>
+      <input type="number" id="potatoes" value="0" step="1" min="0" max="4" name="potatoes"><br><br>
+      <!-- Number input for drinks -->
       <label for="drinks">Pick a number of drinks:</label>
-      <input type="number" step="1" min="0" max="6" id="drinks"><br><br>
+      <input type="number" step="1" min="0" value="0" max="6" id="drinks"><br><br>
       <input type="submit" value="Submit Your Order">
     </form>
+    <div id="results"></div>
   </body>
 </html>

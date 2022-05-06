@@ -5,3 +5,11 @@
 // This file contains the JS functions for index.html
 
 "use strict"
+
+function orderSent() {
+  //initializing variables
+  let cost = 0;
+  //declaring variables
+  let meat-type = document.getElementById("meat-type").value;
+  let sand-size = document.getElementById("sand-size").value;
+}

@@ -1,0 +1,16 @@
+/* Created by: MariaG
+* Created on: May 1, 2022
+* This CSS file defines the style for index.html
+* ICS2O-Unit4-03-HTML-Movie
+*/
+
+body {
+  width: 80%;
+  margin: 5% 10%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+td {
+  border: solid 1px;
+  padding: 10px;
+}

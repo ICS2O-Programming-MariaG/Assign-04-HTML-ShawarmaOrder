@@ -24,8 +24,8 @@ function orderSent() {
   let numToppings = checkboxes.length;
   
   //determining the cost of the toppings using a variable and a constant for the price
-  const unitPriceToppings = 0.25;
-  let costToppings = numToppings * unitPriceToppings;
+  const UNIT_PRICE_TOPPINGS = 0.25;
+  let costToppings = numToppings * UNIT_PRICE_TOPPINGS;
   
   //determining the cost of the base sandwich using compound if/then statements
   //if the meat type is chicken and the size is small

@@ -32,97 +32,118 @@
         </td>
         <td id="td-two">
           <h2>Shawarma Haven</h2>
-          <p>Welcome to Shawarma Haven! Use this web page to view our menu and place your order online! Then, review your order and total and submit it to us. You can get your order delivered or you can select a location for pickup.</p>
+          <p>Welcome to Shawarma Haven! Use this web page to view our menu and place your order online! Then, review your order and total and submit it to us. You can get your order delivered or select a location for pickup.</p>
         </td>
       </tr>
     </table>
     <img id="img-margin" src="./images/chicken-shawarma.jpg" alt="chicken shawarma">
-    <h4>Our Menu and Prices:</h4>
-    <!-- Table listing options and prices -->
+    <!-- Table for placing the menu/prices and user order side-by-side -->
     <table>
       <tr>
-        <th class="border">Item</th>
-        <th class="border">Price</th>
-      </tr>
-      <tr>
-        <td class="border">Chicken Shawarma Sandwich</td>
-        <td class="border">Small: $6.00<br>Medium: $7.00<br>Large: $8.00</td>
-      </tr>
-      <tr>
-        <td class="border">Beef Shawarma Sandwich</td>
-        <td class="border">Small: $6.50<br>Medium: $7.50<br>Large: $8.50</td>
-      </tr>
-      <tr>
-        <td class="border">Toppings (tabbouleh, hummus, pickles, onions, etc.)</td>
-        <td class="border">$0.25 each</td>
-      </tr>
-      <tr>
-        <td class="border">Drinks (canned and bottled juices and pops)</td>
-        <td class="border">$3.00 each</td>
-      </tr>
-      <tr>
-        <td class="border">Garlic Potatoes</td>
-        <td class="border">$6.00</td>
+        <td id="one">
+          <h4>Our Menu and Prices:</h4>
+          <!-- Table listing options and prices -->
+          <table>
+            <tr>
+              <th class="border">Item</th>
+              <th class="border">Price</th>
+            </tr>
+            <tr>
+              <td class="border">Chicken Shawarma Sandwich</td>
+              <td class="border">Small: $6.00<br>Medium: $7.00<br>Large: $8.00</td>
+            </tr>
+            <tr>
+              <td class="border">Beef Shawarma Sandwich</td>
+              <td class="border">Small: $6.50<br>Medium: $7.50<br>Large: $8.50</td>
+            </tr>
+            <tr>
+              <td class="border">Toppings (tabbouleh, hummus, pickles, onions, etc.)</td>
+              <td class="border">$0.25 each</td>
+            </tr>
+            <tr>
+              <td class="border">Drinks (canned and bottled juices and pops)</td>
+              <td class="border">$3.00 each</td>
+            </tr>
+            <tr>
+              <td class="border">Garlic Potatoes</td>
+              <td class="border">$6.00</td>
+            </tr>
+          </table>
+          <!-- Adding div for results under the menu for style - displayed beside user order -->
+          <h4>Your Total:</h4>
+          <div id="results"></div>
+        </td>
+        <!-- Next data cell places user order on the right side of the page -->
+        <td id="two">
+          <!-- Div for styled grey background colour -->
+          <div id="grey">
+            <h4>Your Order:</h4>
+            <h5>Choose Your Base Shawarma Sandwich:</h5>
+            <!-- Form for user input -->
+            <form action="javascript:orderSent()">
+              <!-- Multiple choice - picking a meat type -->
+              <label for="meat-type">Choose a type of meat for your sandwich:</label>
+              <select id="meat-type" name="meat-type">
+                <option value="chicken">Chicken</option>
+                <option value="beef">Beef</option>
+              </select><br><br>
+              <!-- Multiple choice - picking a sandwich size -->
+              <label for="sandwich-size">Choose a sandwich size</label>
+              <select id="sand-size" name="sand-size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+              <h5>Choose Your Toppings:</h5>
+              <!-- MDL checkboxes for toppings -->
+              <!-- First checkbox - for tabbouleh -->
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                <span class="mdl-checkbox__label">Tabbouleh</span>
+                <input type="checkbox" id="tabbouleh" name="tabbouleh" class="mdl-checkbox__input"><br><br>
+              </label>
+              <!--Second checkbox - for hummus -->
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                <span class="mdl-checkbox__label">Hummus</span>
+                <input type="checkbox" id="hummus" name="hummus" class="mdl-checkbox__input"><br><br>
+              </label>
+              <!-- Third checkbox - for garlic sauce -->
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                <span class="mdl-checkbox__label">Garlic sauce</span>
+                <input type="checkbox" id="garlic" name="garlic" class="mdl-checkbox__input"><br><br>
+              </label>
+              <!-- Fourth checkbox - for pickled turnips -->
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                <span class="mdl-checkbox__label">Pickled turnips</span>
+                <input type="checkbox" id="turnips" name="turnips" class="mdl-checkbox__input"><br><br>
+              </label>
+              <!-- Fifth checkbox - for pickles -->
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                <span class="mdl-checkbox__label">Pickles</span>
+                <input type="checkbox" id="pickles" name="pickles" class="mdl-checkbox__input"><br><br>
+              </label>
+              <!-- Sixth checkbox - for onions -->
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                <span class="mdl-checkbox__label">Onions</span>
+                <input type="checkbox" id="onions" name="onions" class="mdl-checkbox__input"><br><br>
+              </label>
+              <h5>Choose Your Sides</h5>
+              <!-- MDL number input with floating label for garlic potato side -->
+        
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="number" id="potatoes" value="0" step="1" min="0" max="3" name="potatoes">
+                <label class="mdl-textfield__label" for="drinks">Pick a number of garlic potato sides:</label>
+              </div><br>
+              <!-- MDL number input with floating label for drinks -->
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="number" id="drinks" step="1" value="0" min="0" max="6" name="drinks">
+                <label class="mdl-textfield__label" for="drinks">Pick a number of drinks:</label>
+              </div><br>
+              <!-- Adding id to submit button for styling -->
+              <input type="submit" id="red" value="Submit Your Order">
+            </form>
+          </div>
+        </td>
       </tr>
     </table>
-    <h4>Your Order:</h4>
-    <h5>Choose Your Base Shawarma Sandwich:</h5>
-    <!-- Form for user input -->
-    <form action="javascript:orderSent()">
-      <!-- Multiple choice - picking a meat type -->
-      <label for="meat-type">Choose a type of meat for your sandwich:</label>
-      <select id="meat-type" name="meat-type">
-        <option value="chicken">Chicken</option>
-        <option value="beef">Beef</option>
-      </select><br><br>
-      <!-- Multiple choice - picking a sandwich size -->
-      <label for="sandwich-size">Choose a sandwich size</label>
-      <select id="sand-size" name="sand-size">
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
-      </select>
-      <h5>Choose Your Toppings:</h5>
-      <!-- MDL checkboxes for toppings -->
-      <!-- First checkbox - for tabbouleh -->
-      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-        <span class="mdl-checkbox__label">Tabbouleh</span>
-        <input type="checkbox" id="tabbouleh" name="tabbouleh" class="mdl-checkbox__input"><br><br>
-      </label>
-      <!--Second checkbox - for hummus -->
-      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-        <span class="mdl-checkbox__label">Hummus</span>
-        <input type="checkbox" id="hummus" name="hummus" class="mdl-checkbox__input"><br><br>
-      </label>
-      <!-- Third checkbox - for garlic sauce -->
-      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-        <span class="mdl-checkbox__label">Garlic sauce</span>
-        <input type="checkbox" id="garlic" name="garlic" class="mdl-checkbox__input"><br><br>
-      </label>
-      <!-- Fourth checkbox - for pickled turnips -->
-      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-        <span class="mdl-checkbox__label">Pickled turnips</span>
-        <input type="checkbox" id="turnips" name="turnips" class="mdl-checkbox__input"><br><br>
-      </label>
-      <!-- Fifth checkbox - for pickles -->
-      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-        <span class="mdl-checkbox__label">Pickles</span>
-        <input type="checkbox" id="pickles" name="pickles" class="mdl-checkbox__input"><br><br>
-      </label>
-      <!-- Sixth checkbox - for onions -->
-      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-        <span class="mdl-checkbox__label">Onions</span>
-        <input type="checkbox" id="onions" name="onions" class="mdl-checkbox__input"><br><br>
-      </label>
-      <h5>Choose Your Sides</h5>
-      <!-- MDL number input for garlic potato side -->
-      <label for="potatoes">Pick a number of garlic potato sides:</label>
-        <input type="number" id="potatoes" value="0" step="1" min="0" max="4" name="potatoes"><br><br>
-      <!-- Number input for drinks -->
-      <label for="drinks">Pick a number of drinks:</label>
-      <input type="number" step="1" min="0" value="0" max="6" id="drinks"><br><br>
-      <input type="submit" value="Submit Your Order">
-    </form>
-    <div id="results"></div>
   </body>
 </html>

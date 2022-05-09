@@ -41,10 +41,42 @@ p {
 
 h4 {
   color: #fd7c17;
-  margin-top: 30px;
   font-weight: bold;
 }
 
 th {
   font-size: 16px;
+}
+
+#two {
+  width: 50%;
+}
+
+#one {
+  width: 50%;
+}
+
+#results {
+  padding: 20px;
+  background-color: #fdfebd;
+  margin-right: 30px;
+  height: 110px;
+}
+
+#red {
+  padding: 10px;
+  color: white;
+  background-color: #f77149;
+  border: none;
+}
+
+p {
+  margin-right: 30px;
+}
+
+#grey {
+  background-color: #ebe9e8;
+  padding: 10px 30px 20px 30px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }

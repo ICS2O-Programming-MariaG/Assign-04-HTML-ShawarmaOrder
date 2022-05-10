@@ -53,9 +53,11 @@ function orderSent() {
     baseSandCost = 8.50;
   }
   
-  //determining the cost of the sides
-  let costDrinks = numDrinks * 3.00;
-  let costPotatoes = numPotatoes * 6.00;
+  //determining the cost of the sides using constants
+  const UNIT_PRICE_DRINKS = 3.00;
+  let costDrinks = numDrinks * UNIT_PRICE_DRINKS;
+  const UNIT_PRICE_POTATOES = 6.00;
+  let costPotatoes = numPotatoes * UNIT_PRICE_POTATOES;
   
   //calculating the subtotal, tax and total
   let subtotal = baseSandCost + costToppings + costDrinks + costPotatoes;

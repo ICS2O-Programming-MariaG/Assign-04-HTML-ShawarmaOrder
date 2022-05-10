@@ -48,8 +48,8 @@ function orderSent() {
   else if ((meatType == "chicken") && (sandSize == "large")) {
     baseSandCost = 8.00;
   }
-  //else indicates that the meat type is beef and the size is large
-  else {
+  //if the meat type is beef and the size is large
+  else if ((meatType == "beef") && (sandSize == "large")) {
     baseSandCost = 8.50;
   }
   
